@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "FootballMania"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-FootballMania-2dd58b3e-7082-4bcc-bd14-969c2ea01e07;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}
