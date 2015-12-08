@@ -10,6 +10,8 @@ namespace FootballMania.Controllers
     {
         public IActionResult Index()
         {
+            FootballAPI api = new FootballAPI();
+            api.GetFootballData();
             return View();
         }
 
