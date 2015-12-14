@@ -151,7 +151,7 @@ namespace FootballMania.Controllers
         }
 
         //
-        // GET: /Account/ExternalLoginCallback
+        // GET: /Account/
         [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null)

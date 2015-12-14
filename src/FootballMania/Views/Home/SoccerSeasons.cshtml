@@ -1,0 +1,11 @@
+﻿@model FootballMania.Models.Season
+@{
+    ViewData["Title"] = "Verify Phone Number";
+}
+<h2>@ViewData["Title"].</h2>
+
+<form asp-controller="Home" asp-action="GetSoccerSeasons" method="get" class="form-horizontal" role="form">
+    <div ng-app="myapp" ng-controller="customersCtrl">
+        <label asp-for="caption"></label>
+    </div>
+</form>
