@@ -1,4 +1,4 @@
-﻿{
+{
     "webroot": "wwwroot",
     "userSecretsId": "aspnet5-FootballMania-2dd58b3e-7082-4bcc-bd14-969c2ea01e07",
     "version": "1.0.0-*",
@@ -25,7 +25,8 @@
         "Microsoft.Framework.Configuration.UserSecrets": "1.0.0-beta5",
         "Microsoft.Framework.Logging": "1.0.0-beta5",
         "Microsoft.Framework.Logging.Console": "1.0.0-beta5",
-        "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta5"
+        "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta5",
+        "Microsoft.AspNet.Mvc.WebApiCompatShim": "6.0.0-beta5"
     },
 
     "commands": {

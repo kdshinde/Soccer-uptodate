@@ -3,14 +3,16 @@
 }
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
+    @*<ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
+    </ol>*@
     <div class="carousel-inner" role="listbox">
-        <div class="item active">
+        <div ng-app="app" ng-controller="seasoncontroller">
+           </div>
+        @*<div class="item active">
             <img src="~/images/ASP-NET-Banners-01.png" alt="ASP.NET" class="img-responsive">
             <div class="container">
                 <div class="carousel-caption">
@@ -61,12 +63,12 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </div>*@
     </div>
 </div>
 
 <div class="row">
-    <div class="col-md-3">
+    @*<div class="col-md-3">
         <h2>Application uses</h2>
         <ul>
             <li>Sample pages using ASP.NET 5 (MVC 6)</li>
@@ -100,5 +102,5 @@
             <li><a href="http://go.microsoft.com/fwlink/?LinkID=517853">Run commands in your app</a></li>
             <li><a href="http://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
         </ul>
-    </div>
+    </div>*@
 </div>
