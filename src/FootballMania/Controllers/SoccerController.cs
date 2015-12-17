@@ -14,12 +14,9 @@ namespace FootballMania.Controllers
     [Route("api/[controller]")]
     public class SoccerController : Controller
     {
-        // GET: /Soccer/GetSoccerSeasons
-        //[Route("api/Soccer/GetSoccerSeasons")]
-        //[HttpGet]
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public async Task<IActionResult> Get()
+        // GET: api/Soccer/GetSoccerSeasons
+        [HttpGet("GetSoccerSeasons")]
+        public async Task<IActionResult> GetSoccerSeasons()
         {
             using (HttpClient client = new HttpClient())
             {
@@ -34,6 +31,26 @@ namespace FootballMania.Controllers
                     soccerseasons = JsonConvert.DeserializeObject<List<Season>>(responseJson);
                 }
                 return new ObjectResult(soccerseasons);
+            }
+        }
+
+        // GET: api/Soccer/GetAllFixtures
+        [HttpGet("GetAllFixtures")]
+        public async Task<IActionResult> GetAllFixtures()
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                var baseUri = "http://www.football-data.org/v1/fixtures/";
+                client.BaseAddress = new Uri(baseUri);
+                client.DefaultRequestHeaders.Add("X-Auth-Token", "7b049d5b78124b76be75081c53975451");
+                var response = await client.GetAsync(baseUri);
+                FootballFixtures fixtures = new FootballFixtures();
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseJson = await response.Content.ReadAsStringAsync();
+                    fixtures = JsonConvert.DeserializeObject<FootballFixtures>(responseJson);
+                }
+                return new ObjectResult(fixtures);
             }
         }
 

@@ -9,14 +9,18 @@
 
     function soccerfactory($http) {
         var service = {
-            getData: getData
+            getLeagues: getLeagues,
+            getFixtures: getFixtures
         };
 
         return service;
 
-        function getData() {
-           $http.get("api/Soccer/GetSoccerSeasons")
-                .then(function (data) { console.log(data); });
+        function getLeagues() {
+            return $http.get("api/Soccer/GetSoccerSeasons");                
+        }
+
+        function getFixtures() {
+            return $http.get("api/Soccer/GetAllFixtures");
         }
     }
 })();

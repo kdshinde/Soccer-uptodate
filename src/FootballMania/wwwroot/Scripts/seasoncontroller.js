@@ -5,15 +5,16 @@
         .module('app')
         .controller('seasoncontroller', seasoncontroller);
 
-    seasoncontroller.$inject = ['$scope', 'soccerfactory'];
+       seasoncontroller.$inject = ['$scope', 'soccerfactory'];
 
     function seasoncontroller($scope, soccerfactory) {
-        /* jshint validthis:true */
-       // alert('controller');
-        //var vm = this;
-        //vm.title = 'Seasoncontroller';
-        soccerfactory.getData();
-        //activate();
-       // function activate() { }
+        soccerfactory.getLeagues().success(function (leagues) {
+            $scope.leagues = leagues;
+        });
+
+        soccerfactory.getFixtures().success(function (fixtures) {
+            console.log(fixtures);
+            $scope.fixtures = fixtures;
+        });
     }
 })();
