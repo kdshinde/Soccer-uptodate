@@ -1,14 +1,20 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <div class="carousel-inner" role="listbox">
         <div ng-app="app" ng-controller="seasoncontroller">
-            <div ng-repeat="league in leagues">
-                {{league._links.self.href}}   <br/>
+           <div class="container-fluid">
+               <div class="row" >
+                    <div class="col-sm-4" ng-repeat="league in leagues" style="background-color:lavender;" ng-click="clickMe($event);">
+                        <div class="league">
+                            {{league.league}}
+                        </div>
+                        <div class="year">
+                            {{league.year}}
+                        </div>
+                   </div>                   
+                </div>
             </div>
         </div>
-    </div>
-</div>
+
+
 

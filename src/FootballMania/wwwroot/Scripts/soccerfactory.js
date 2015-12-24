@@ -10,7 +10,8 @@
     function soccerfactory($http) {
         var service = {
             getLeagues: getLeagues,
-            getFixtures: getFixtures
+            getFixtures: getFixtures,
+            giveAlert:giveAlert
         };
 
         return service;
@@ -21,6 +22,10 @@
 
         function getFixtures() {
             return $http.get("api/Soccer/GetAllFixtures");
+        }
+
+        function giveAlert() {
+            alert('hi');
         }
     }
 })();

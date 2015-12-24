@@ -16,5 +16,9 @@
             console.log(fixtures);
             $scope.fixtures = fixtures;
         });
+
+        $scope.clickMe = function (clickEvent) {
+            alert("hi");
+        }
     }
 })();
