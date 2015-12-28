@@ -55,4 +55,9 @@ textarea {
     width: 170px;
     height: 80px;
     text-align: justify;
+    opacity:0.5;
+}
+
+.content:hover {
+        opacity: 1.0;
 }
