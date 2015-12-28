@@ -33,21 +33,26 @@ textarea {
     }
 }
 
-.col-sm-4{
-  margin-top: 50px;
-  margin-bottom: 50px
+
+.league, .year {
+           text-align:center;
 }
 
-.league {
-     margin-bottom: 5px
-}
-
-.main{
+.row{
    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
-    font-size: 40px;
+    font-size: 20px;
     padding: 0;
     line-height: 25px; 
     color: white;
-
+       
 }
 
+.content{
+    background: #B2002E;
+    border-radius: 25px;
+    margin: 50px;
+    padding: 10px;
+    width: 170px;
+    height: 80px;
+    text-align: justify;
+}

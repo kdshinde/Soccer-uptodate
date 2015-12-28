@@ -11,7 +11,8 @@
         var service = {
             getLeagues: getLeagues,
             getFixtures: getFixtures,
-            giveAlert:giveAlert
+            giveAlert: giveAlert,
+            replaceAll:replaceAll
         };
 
         return service;
@@ -26,6 +27,14 @@
 
         function giveAlert() {
             alert('hi');
+        }
+
+        function replaceAll(str, mapObj) {
+            var re = new RegExp(Object.keys(mapObj).join("|"), "gi");
+
+            return str.replace(re, function (matched) {
+                return mapObj[matched];
+            });
         }
     }
 })();

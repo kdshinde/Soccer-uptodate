@@ -20,5 +20,22 @@
         $scope.clickMe = function (clickEvent) {
             alert("hi");
         }
+
+        $scope.leagueNameFilter = function (league) {
+            var mapObj = {
+                BL: "Bundesliga",
+                FL: "Ligue",
+                PL: "Premier League",
+                PD: "Primera Division",
+                SD: "Segunda Division",
+                SA: "Serie A",
+                PPL: "Primeira Liga",
+                DED: "Eredivisie",
+                CL: "Champions League"
+            };
+            league.league = soccerfactory.replaceAll(league.league, mapObj);
+            return league;
+        }
+
     }
 })();

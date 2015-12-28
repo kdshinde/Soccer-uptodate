@@ -13,13 +13,15 @@
         <div class="main" ng-app="app" ng-controller="seasoncontroller">
            <div class="container-fluid">
                <div class="row" >
-                    <div class="col-sm-4" ng-repeat="league in leagues" ng-click="clickMe($event);">
+                    <div class="col-sm-4" ng-repeat="league in leagues| filter:leagueNameFilter" >
+                        <div class="content" ng-click="clickMe($event);">
                         <div class="league">
                             {{league.league}}
                         </div>
                         <div class="year">
                             {{league.year}}
                         </div>
+                            </div>
                    </div>                   
                 </div>
             </div>
