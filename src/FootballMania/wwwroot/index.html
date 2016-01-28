@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <ul class="cb-slideshow">
+        <li><span>Image 01</span></li>
+        <li><span>Image 02</span></li>
+        <li><span>Image 03</span></li>
+        <li><span>Image 04</span></li>
+        <li><span>Image 05</span></li>
+        <li><span>Image 06</span></li>
+    </ul>
+
+    <div class="main" ng-app="app" ng-controller="seasoncontroller">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4" ng-repeat="league in leagues| filter:leagueNameFilter">
+                    <div class="content" ng-cloak>
+                        <div class="league" ng-cloak>
+                            <a href="/Season/Show">{{league.league}}</a>
+                        </div>
+                        <div class="year" ng-cloak>
+                            {{league.year}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -56,8 +56,11 @@ textarea {
     height: 80px;
     text-align: justify;
     opacity:0.5;
+    transition: opacity 0s linear;
 }
 
 .content:hover {
         opacity: 1.0;
 }
+
+[ng\:cloak],[ng-cloak],.ng-cloak{display:none !important}

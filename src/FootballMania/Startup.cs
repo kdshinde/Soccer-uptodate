@@ -120,6 +120,7 @@ namespace FootballMania
             // For more information see http://go.microsoft.com/fwlink/?LinkID=532715
             // app.UseFacebookAuthentication();
             // app.UseGoogleAuthentication();
+
             // app.UseMicrosoftAccountAuthentication();
             // app.UseTwitterAuthentication();
 
@@ -133,6 +134,7 @@ namespace FootballMania
                 // Uncomment the following line to add a route for porting Web API 2 controllers.
                 routes.MapWebApiRoute("defaultone", "api/Soccer/GetSoccerSeasons");
                 routes.MapWebApiRoute("defaulttwo", "api/Soccer/GetAllFixtures");
+                
             });
         }
     }

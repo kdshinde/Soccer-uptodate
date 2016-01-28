@@ -1,0 +1,15 @@
+﻿  
+  <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4" ng-repeat="league in leagues| filter:leagueNameFilter">
+                <div class="content" ng-cloak>
+                    <div class="league" ng-cloak>
+                        <a href="/api/Show/GetLeague/">{{league.league}}</a>
+                    </div>
+                    <div class="year" ng-cloak>
+                        {{league.year}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

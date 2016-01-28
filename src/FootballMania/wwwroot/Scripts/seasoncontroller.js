@@ -7,13 +7,12 @@
 
        seasoncontroller.$inject = ['$scope', 'soccerfactory'];
 
-    function seasoncontroller($scope, soccerfactory) {
+    function seasoncontroller($scope, soccerfactory, $locationProvider) {
         soccerfactory.getLeagues().success(function (leagues) {
             $scope.leagues = leagues;
         });
 
         soccerfactory.getFixtures().success(function (fixtures) {
-            console.log(fixtures);
             $scope.fixtures = fixtures;
         });
 

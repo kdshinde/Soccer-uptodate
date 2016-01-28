@@ -4,17 +4,19 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>@ViewData["Title"] - FootballMania</title>
+        <base href="/">
 
         <environment names="Development">
             <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
             <link rel="stylesheet" href="~/lib/bootstrap-touch-carousel/dist/css/bootstrap-touch-carousel.css" />
             <link rel="stylesheet" href="~/css/site.css" />
-            <link rel="stylesheet" type="text/css" href="css/demo.css" />
             <link rel="stylesheet" type="text/css" href="css/slideShow.css" />
             <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
             <script src="~/scripts/app.js"></script>
             <script src="~/scripts/seasoncontroller.js"></script>
             <script src="~/scripts/soccerfactory.js"></script>
+            <script src="~/scripts/leaguecontroller.js"></script>
 
          </environment>
         <environment names="Staging,Production">
@@ -27,9 +29,12 @@
             <link rel="stylesheet" href="~/css/site.css" asp-file-version="true" />
             <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"
                     asp-fallback-src="~/lib/angular/angular.min.js" asp-fallback-test="window.angular"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"
+                    asp-fallback-src="~/lib/angular-route/angular-route.min.js" asp-fallback-test="window.angular"></script>
             <script src="~/scripts/app.js" asp-file-version="true"></script>
             <script src="~/scripts/seasoncontroller.js" asp-file-version="true"></script>     
-            <script src="~/scripts/soccerfactory.js" asp-file-version="true"></script>                               
+            <script src="~/scripts/soccerfactory.js" asp-file-version="true"></script>         
+               
         </environment>
     </head>
     <body>
@@ -54,6 +59,14 @@
             </div>
         </div>
         <div class="container body-content">
+            <ul class="cb-slideshow">
+                <li><span>Image 01</span></li>
+                <li><span>Image 02</span></li>
+                <li><span>Image 03</span></li>
+                <li><span>Image 04</span></li>
+                <li><span>Image 05</span></li>
+                <li><span>Image 06</span></li>
+            </ul>
             @RenderBody()
             <hr />
             <footer>
