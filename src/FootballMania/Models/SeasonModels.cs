@@ -31,6 +31,11 @@ namespace FootballMania.Models
         public string href { get; set; }
     }
 
+    public class soccerseason
+    {
+        public string href { get; set; }
+    }
+
     public class _links
     {
         public self self { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace FootballMania.Models
 {
 
-    public class Teams
+    public class LeagueTeams
     {
         public int count { get; set; }
         public List<SingleTeam> teams { get; set; }

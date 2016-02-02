@@ -54,6 +54,71 @@ namespace FootballMania.Controllers
             }
         }
 
+        // GET: api/Soccer/GetLeagueTeams
+        [HttpGet("GetLeagueTeams")]
+        public async Task<IActionResult> GetLeagueTeams(string LeagueId)
+        {
+            // Need to decide if the whole link will be sent or if the id. Because we are sending the whole link to the UI as a string (href) 
+            using (HttpClient client = new HttpClient())
+            {
+                var baseUri = "http://www.football-data.org/v1/soccerseasons/" + LeagueId + "/teams";
+                client.BaseAddress = new Uri(baseUri);
+                client.DefaultRequestHeaders.Add("X-Auth-Token", "7b049d5b78124b76be75081c53975451");
+                var response = await client.GetAsync(baseUri);
+                LeagueTeams leagueteams = new LeagueTeams();
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseJson = await response.Content.ReadAsStringAsync();
+                    leagueteams = JsonConvert.DeserializeObject<LeagueTeams>(responseJson);
+                }
+                return new ObjectResult(leagueteams);
+            }
+        }
+
+        // GET: api/Soccer/GetLeagueFixtures
+        [HttpGet("GetLeagueFixtures")]
+        public async Task<IActionResult> GetLeagueFixtures(string LeagueId)
+        {
+            // Need to decide if the whole link will be sent or if the id. Because we are sending the whole link to the UI as a string (href) 
+            using (HttpClient client = new HttpClient())
+            {
+                var baseUri = "http://www.football-data.org/v1/soccerseasons/" + LeagueId + "/fixtures";
+                client.BaseAddress = new Uri(baseUri);
+                client.DefaultRequestHeaders.Add("X-Auth-Token", "7b049d5b78124b76be75081c53975451");
+                var response = await client.GetAsync(baseUri);
+                LeagueFixtures leaguefixtures = new LeagueFixtures();
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseJson = await response.Content.ReadAsStringAsync();
+                    leaguefixtures = JsonConvert.DeserializeObject<LeagueFixtures>(responseJson);
+                    
+                }
+                return new ObjectResult(leaguefixtures);
+            }
+        }
+
+        // GET: api/Soccer/GetLeagueTable
+        [HttpGet("GetLeagueTable")]
+        public async Task<IActionResult> GetLeagueTable(string LeagueId)
+        {
+            // Need to decide if the whole link will be sent or if the id. Because we are sending the whole link to the UI as a string (href) 
+            using (HttpClient client = new HttpClient())
+            {
+                var baseUri = "http://www.football-data.org/v1/soccerseasons/" + LeagueId + "/leagueTable";
+                client.BaseAddress = new Uri(baseUri);
+                client.DefaultRequestHeaders.Add("X-Auth-Token", "7b049d5b78124b76be75081c53975451");
+                var response = await client.GetAsync(baseUri);
+                LeagueTable leaguetable = new LeagueTable();
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseJson = await response.Content.ReadAsStringAsync();
+                    leaguetable = JsonConvert.DeserializeObject<LeagueTable>(responseJson);
+
+                }
+                return new ObjectResult(leaguetable);
+            }
+        }
+
         // POST api/values
         [HttpPost]
         public void Post([FromBody]string value)

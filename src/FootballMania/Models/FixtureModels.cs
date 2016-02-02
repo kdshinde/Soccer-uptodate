@@ -13,6 +13,19 @@ namespace FootballMania.Models
         public List<Mainfixtures> fixtures { get; set; }
     }
 
+    public class LeagueFixtures
+    {
+        public int count { get; set; }
+        public List<Mainfixtures> fixtures { get; set; }
+        public League_links _links { get; set; }
+    }
+
+    public class League_links
+    {
+        public self self { get; set; }
+        public soccerseason soocerseason { get; set; }
+    }
+
     public class Mainfixtures
     {
         public FixtureLinks _links { get; set; }
