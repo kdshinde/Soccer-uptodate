@@ -29,13 +29,13 @@ namespace FootballMania.Migrations
 
             builder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityRole", b =>
                 {
-                    b.Property<string>("Id")
-                        .GenerateValueOnAdd()
-                        .Annotation("OriginalValueIndex", 0);
+                    //b.Property<string>("Id")
+                    //    .GenerateValueOnAdd()
+                    //    .Annotation("OriginalValueIndex", 0);
 
-                    b.Property<string>("ConcurrencyStamp")
-                        .ConcurrencyToken()
-                        .Annotation("OriginalValueIndex", 1);
+                    //b.Property<string>("ConcurrencyStamp")
+                    //    .ConcurrencyToken()
+                    //    .Annotation("OriginalValueIndex", 1);
 
                     b.Property<string>("Name")
                         .Annotation("OriginalValueIndex", 2);
@@ -43,17 +43,17 @@ namespace FootballMania.Migrations
                     b.Property<string>("NormalizedName")
                         .Annotation("OriginalValueIndex", 3);
 
-                    b.Key("Id");
+                    //b.Key("Id");
 
                     b.Annotation("Relational:TableName", "AspNetRoles");
                 });
 
             builder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityRoleClaim<string>", b =>
                 {
-                    b.Property<int>("Id")
-                        .GenerateValueOnAdd()
-                        .StoreGeneratedPattern(StoreGeneratedPattern.Identity)
-                        .Annotation("OriginalValueIndex", 0);
+                    //b.Property<int>("Id")
+                    //    .GenerateValueOnAdd()
+                    //    .StoreGeneratedPattern(StoreGeneratedPattern.Identity)
+                    //    .Annotation("OriginalValueIndex", 0);
 
                     b.Property<string>("ClaimType")
                         .Annotation("OriginalValueIndex", 1);
@@ -64,17 +64,17 @@ namespace FootballMania.Migrations
                     b.Property<string>("RoleId")
                         .Annotation("OriginalValueIndex", 3);
 
-                    b.Key("Id");
+                    //b.Key("Id");
 
                     b.Annotation("Relational:TableName", "AspNetRoleClaims");
                 });
 
             builder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityUserClaim<string>", b =>
                 {
-                    b.Property<int>("Id")
-                        .GenerateValueOnAdd()
-                        .StoreGeneratedPattern(StoreGeneratedPattern.Identity)
-                        .Annotation("OriginalValueIndex", 0);
+                    //b.Property<int>("Id")
+                    //    .GenerateValueOnAdd()
+                    //    .StoreGeneratedPattern(StoreGeneratedPattern.Identity)
+                    //    .Annotation("OriginalValueIndex", 0);
 
                     b.Property<string>("ClaimType")
                         .Annotation("OriginalValueIndex", 1);
@@ -85,20 +85,20 @@ namespace FootballMania.Migrations
                     b.Property<string>("UserId")
                         .Annotation("OriginalValueIndex", 3);
 
-                    b.Key("Id");
+                    //b.Key("Id");
 
                     b.Annotation("Relational:TableName", "AspNetUserClaims");
                 });
 
             builder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityUserLogin<string>", b =>
                 {
-                    b.Property<string>("LoginProvider")
-                        .GenerateValueOnAdd()
-                        .Annotation("OriginalValueIndex", 0);
+                    //b.Property<string>("LoginProvider")
+                    //    .GenerateValueOnAdd()
+                    //    .Annotation("OriginalValueIndex", 0);
 
-                    b.Property<string>("ProviderKey")
-                        .GenerateValueOnAdd()
-                        .Annotation("OriginalValueIndex", 1);
+                    //b.Property<string>("ProviderKey")
+                    //    .GenerateValueOnAdd()
+                    //    .Annotation("OriginalValueIndex", 1);
 
                     b.Property<string>("ProviderDisplayName")
                         .Annotation("OriginalValueIndex", 2);
@@ -106,7 +106,7 @@ namespace FootballMania.Migrations
                     b.Property<string>("UserId")
                         .Annotation("OriginalValueIndex", 3);
 
-                    b.Key("LoginProvider", "ProviderKey");
+                    //b.Key("LoginProvider", "ProviderKey");
 
                     b.Annotation("Relational:TableName", "AspNetUserLogins");
                 });
@@ -119,23 +119,23 @@ namespace FootballMania.Migrations
                     b.Property<string>("RoleId")
                         .Annotation("OriginalValueIndex", 1);
 
-                    b.Key("UserId", "RoleId");
+                    //b.Key("UserId", "RoleId");
 
                     b.Annotation("Relational:TableName", "AspNetUserRoles");
                 });
 
             builder.Entity("FootballMania.Models.ApplicationUser", b =>
                 {
-                    b.Property<string>("Id")
-                        .GenerateValueOnAdd()
-                        .Annotation("OriginalValueIndex", 0);
+                    //b.Property<string>("Id")
+                    //    .GenerateValueOnAdd()
+                    //    .Annotation("OriginalValueIndex", 0);
 
                     b.Property<int>("AccessFailedCount")
                         .Annotation("OriginalValueIndex", 1);
 
-                    b.Property<string>("ConcurrencyStamp")
-                        .ConcurrencyToken()
-                        .Annotation("OriginalValueIndex", 2);
+                    //b.Property<string>("ConcurrencyStamp")
+                    //    .ConcurrencyToken()
+                    //    .Annotation("OriginalValueIndex", 2);
 
                     b.Property<string>("Email")
                         .Annotation("OriginalValueIndex", 3);
@@ -173,41 +173,41 @@ namespace FootballMania.Migrations
                     b.Property<string>("UserName")
                         .Annotation("OriginalValueIndex", 14);
 
-                    b.Key("Id");
+                    //b.Key("Id");
 
                     b.Annotation("Relational:TableName", "AspNetUsers");
                 });
 
             builder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityRoleClaim<string>", b =>
                 {
-                    b.Reference("Microsoft.AspNet.Identity.EntityFramework.IdentityRole")
-                        .InverseCollection()
-                        .ForeignKey("RoleId");
+                    //b.Reference("Microsoft.AspNet.Identity.EntityFramework.IdentityRole")
+                    //    .InverseCollection()
+                    //    .ForeignKey("RoleId");
                 });
 
             builder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityUserClaim<string>", b =>
                 {
-                    b.Reference("FootballMania.Models.ApplicationUser")
-                        .InverseCollection()
-                        .ForeignKey("UserId");
+                    //b.Reference("FootballMania.Models.ApplicationUser")
+                    //    .InverseCollection()
+                    //    .ForeignKey("UserId");
                 });
 
             builder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityUserLogin<string>", b =>
                 {
-                    b.Reference("FootballMania.Models.ApplicationUser")
-                        .InverseCollection()
-                        .ForeignKey("UserId");
+                    //b.Reference("FootballMania.Models.ApplicationUser")
+                    //    .InverseCollection()
+                    //    .ForeignKey("UserId");
                 });
 
             builder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityUserRole<string>", b =>
                 {
-                    b.Reference("Microsoft.AspNet.Identity.EntityFramework.IdentityRole")
-                        .InverseCollection()
-                        .ForeignKey("RoleId");
+                    //b.Reference("Microsoft.AspNet.Identity.EntityFramework.IdentityRole")
+                    //    .InverseCollection()
+                    //    .ForeignKey("RoleId");
 
-                    b.Reference("FootballMania.Models.ApplicationUser")
-                        .InverseCollection()
-                        .ForeignKey("UserId");
+                    //b.Reference("FootballMania.Models.ApplicationUser")
+                    //    .InverseCollection()
+                    //    .ForeignKey("UserId");
                 });
         }
     }
