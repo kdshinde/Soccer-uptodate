@@ -1,4 +1,4 @@
-# FirstRepo
+# Soccer-uptodate
 The main objective of this project is to create a website that shows up-to-date information about certain Football (Soccer) leagues and to provide statistics and information about the teams participating in the competition along with the respective league. 
 
 We are using free REST API to fetch all the data (Football-data.org)
